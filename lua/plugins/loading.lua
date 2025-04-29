@@ -7,7 +7,6 @@ return {
     {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
     { 'junegunn/fzf' },
     { 'junegunn/fzf.vim' } ,
-    { 'neovim/nvim-lspconfig' },
     { 'alexaandru/nvim-lspupdate' },
     { 'nvim-lua/completion-nvim' },
     {
@@ -62,5 +61,14 @@ return {
               -- Configuration here, or leave empty to use defaults
           })
       end
+  },{
+    'stevearc/conform.nvim',
+    opts = {},
+  },{
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  },{
+    "andymass/vim-matchup"
   }
 } 
