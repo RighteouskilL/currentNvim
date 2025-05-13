@@ -11,7 +11,24 @@ telescope.setup({
       horizontal = { width = 0.9 , preview_width = 0.7 },
     },
   },
+  pickers = {
+    buffers = {
+      sort_lastused = true,
+      ignore_current_buffer = false,
+      show_all_buffers = true,
+      previewer = false,
+      mappings = {
+        i = {
+          ["<C-d>"] = "delete_buffer",
+        },
+        n = {
+          ["<C-d>"] = "delete_buffer",
+        },
+      },
+    },
+  }
 })
+
 telescope.load_extension("themes")
 
 -- Key mappings for Telescope

@@ -1,4 +1,13 @@
-require("mason").setup()
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+--[[
 require("mason-lspconfig").setup({
     ensure_installed = {
         "lua_ls",
@@ -18,17 +27,6 @@ require("mason-lspconfig").setup({
         "grammarly",
         "bashls"
     },
+    automatic_enable = true
 })
-
-require('lspconfig').emmet_ls.setup({
-  filetypes = {
-      "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "javascript", "typescript", "markdown", "ejs"
-  },
-  init_options = {
-      html = {
-        options = {
-              ["bem.enabled"] = true, -- Example option
-          },
-      },
-  },
-})
+]]

@@ -67,7 +67,7 @@ return {
   },{
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
+    "neovim/nvim-lspconfig"
   },{
     "andymass/vim-matchup"
   }
