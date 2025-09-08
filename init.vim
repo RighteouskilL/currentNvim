@@ -1,6 +1,6 @@
 autocmd BufRead,BufNewFile *.ejs set filetype=html
 " setting
-let mapleader = ";"
+" let mapleader = ";"
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:indentLine_enabled = 1
 let g:indentLine_setColors = 8
@@ -9,6 +9,7 @@ let g:indentLine_bgcolor_term = 236
 let g:indentLine_bgcolor_gui = '#2e3440'
 let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#3b4252'
+let g:NERDTreeConfirmDelete = 0
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-i': 'split',
@@ -51,6 +52,7 @@ set tags=./tags;/
 set termguicolors
 set t_Co=256
 set wildmenu
+highlight Visual guibg=#444444 guifg=NONE
 setlocal foldexpr="nvim_treesitter#foldexpr()"
 setlocal scrolloff<
 setlocal scrolloff=24

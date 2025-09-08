@@ -1,5 +1,9 @@
 vim.cmd('command! ReloadConfig source $MYVIMRC')
+vim.g.mapleader = ";"
+
 -- Key bindings in Lua
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-d>', ':Triptych<CR>', { noremap = true, silent = true }) -- Toggle NvimTree
 vim.api.nvim_set_keymap('n', '<C-g>', ":lua require('search').open()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope fd<CR>', { noremap = true, silent = true })  -- Find files using Telescope
 vim.api.nvim_set_keymap('n', '<C-f>', ':Telescope grep_string<CR>', { noremap = true, silent = true }) -- Search for a string in the file

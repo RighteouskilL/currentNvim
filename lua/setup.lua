@@ -1,3 +1,4 @@
+require('keybinding')
 require('config.lazy')
 require('config.copilot')
 require('config.lualine')
@@ -11,7 +12,7 @@ require('config.lspconfig')
 require('config.themer')
 require('config.indentblankline')
 require('config.conform')
-require('keybinding')
+require('config.triptych')
 
 -- Startup configuration for Neovim
 local file = io.open(vim.fn.stdpath("config") .. "/last_theme.txt", "r")
@@ -25,4 +26,24 @@ else
     require("themer").setup({ colorscheme = "uwu" })
 end
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+-- Set up nvim-tree
+require("nvim-tree").setup({
+  sort = {
+    sorter = "case_sensitive",
+  },
+  view = {
+    width = 30,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
 

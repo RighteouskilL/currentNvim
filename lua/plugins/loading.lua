@@ -68,7 +68,53 @@ return {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig"
+  },
+  { "andymass/vim-matchup" },
+  {"hughbien/md-vim" },
+  {
+    'simonmclean/triptych.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'nvim-tree/nvim-web-devicons', -- optional for icons
+      'antosha417/nvim-lsp-file-operations' -- optional LSP integration
+    }
   },{
-    "andymass/vim-matchup"
+    'nvim-tree/nvim-tree.lua',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    }
+  },{
+    'lewis6991/gitsigns.nvim',
+    opts = {}
+  },{
+    'numToStr/Comment.nvim',
+    opts = {}
+  },{
+    'folke/which-key.nvim',
+    opts = {}
+  },{
+    'rcarriga/nvim-notify',
+    opts = {
+      background_colour = "#000000",
+    }
+  },{
+    'akinsho/toggleterm.nvim',
+    version = "*",
+    opts = {
+      open_mapping = [[<c-\>]],
+      direction = 'float',
+      float_opts = {
+        border = 'curved',
+      },
+    }
+  },{
+    'mbbill/undotree',
+    event = "BufRead",
+  },{
+    'tpope/vim-fugitive',
+    event = "BufRead",
+  },{
+    'tpope/vim-surround',
+    event = "BufRead",
   }
-} 
+}
