@@ -2,6 +2,7 @@ vim.cmd('command! ReloadConfig source $MYVIMRC')
 vim.g.mapleader = ";"
 
 -- Key bindings in Lua
+vim.api.nvim_set_keymap('n', '<C-s>', ':w<CR>', { noremap = true, silent = true }) -- Save file
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-d>', ':Triptych<CR>', { noremap = true, silent = true }) -- Toggle NvimTree
 vim.api.nvim_set_keymap('n', '<C-g>', ":lua require('search').open()<CR>", { noremap = true, silent = true })
@@ -16,6 +17,7 @@ vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', { noremap = true, silent = t
 vim.api.nvim_set_keymap('n', '<leader>W', ':wq<CR>', { noremap = true, silent = true }) -- Save and quit
 vim.api.nvim_set_keymap('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true }) -- Close the current buffer
 vim.api.nvim_set_keymap('n', '<leader>BD', ':bd!<CR>', { noremap = true, silent = true }) -- Force close buffer without saving
+vim.api.nvim_set_keymap('n', '<leader>bda', ':bufdo bd!<CR>', { noremap = true, silent = true }) -- Force close all buffers
 vim.api.nvim_set_keymap('n', '<leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true }) -- Toggle highlight search
 vim.api.nvim_set_keymap('n', '<leader>n', ':set number!<CR>', { noremap = true, silent = true }) -- Toggle line numbers
 vim.api.nvim_set_keymap('n', '<leader>r', ':set relativenumber!<CR>', { noremap = true, silent = true }) -- Toggle relative line numbers
