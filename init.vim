@@ -1,3 +1,4 @@
+let &runtimepath .= ',' . expand('~/AppData/Local/nvim')
 autocmd BufRead,BufNewFile *.ejs set filetype=html
 " setting
 " let mapleader = ";"
@@ -61,5 +62,5 @@ filetype plugin indent on
 syntax enable
 syntax on
 "lua config
-lua require("/setup")
+lua require("setup")
 
